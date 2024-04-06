@@ -10,4 +10,6 @@ This template should help get you started developing with Vue 3 and TypeScript i
 
 ## Demo
 
-    You can test this application by this [Demo Link](https://main.d2c2i2ooqkekpo.amplifyapp.com)
+    You can test this application by this link
+
+[Demo](https://main.d2c2i2ooqkekpo.amplifyapp.com)
