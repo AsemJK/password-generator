@@ -10,7 +10,7 @@ This template should help get you started developing with Vue 3 and TypeScript i
 
 ## Screenshot
 
-[!["Generator"](/shot.png "AsemJKA")](https://asemalsaiyadi.onrender.com)
+[!["Generator"](/public/shot.png "AsemJKA")](https://asemalsaiyadi.onrender.com)
 
 ## Demo
 
