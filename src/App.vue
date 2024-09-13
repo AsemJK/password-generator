@@ -3,6 +3,7 @@ import { ref } from "vue";
 
 const generatedPassword = ref<string>("");
 const hasUpperCase = ref<boolean>(false);
+const isUpperCase = ref<boolean>(false);
 const hasNumbers = ref<boolean>(false);
 const hasSymbols = ref<boolean>(false);
 const passwordLength = ref<number>(12);
@@ -15,6 +16,7 @@ const all = ref("");
 
 const generatePassword = () => {
   all.value = lowerChars.value;
+  if (isUpperCase.value) all.value = allUpperCase.value;
   if (hasUpperCase.value) all.value += allUpperCase.value;
   if (hasNumbers.value) all.value += allNumbers.value;
   if (hasSymbols.value) all.value += allSymbols.value;
@@ -40,12 +42,15 @@ const resetPassword = () => {
     <a href="https://asemcode.dev" target="_blank">
       <img src="/logo.png" class="logo" alt="Asem logo" />
     </a>
-    <div class="main">
+    <div class="d-flex flex-row main">
+      <div id="div1">
+        <label for="isUpperCase">Is Upper Case Only</label>
+        <input type="checkbox" id="isUpperCase" v-model="isUpperCase" />
+      </div>
       <div id="div2">
         <label for="hasUpperCase">Has Upper Case</label>
         <input type="checkbox" id="hasUpperCase" v-model="hasUpperCase" />
       </div>
-
       <div id="div2">
         <label for="hasNumbers">Has Numbers</label>
         <input type="checkbox" id="hasNumbers" v-model="hasNumbers" />
